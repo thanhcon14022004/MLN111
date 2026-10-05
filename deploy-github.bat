@@ -22,11 +22,12 @@ echo.
 echo [3/3] Hoan tat day code len GitHub!
 echo.
 echo =========================================================================
-echo    GitHub Actions dang tu dong build va phat hanh website tai:
+echo    Website dang chay tren GitHub Pages tai:
 echo    https://thanhcon14022004.github.io/MLN111/
 echo.
-echo    Ban co the theo doi tien trinh deploy tai:
-echo    https://github.com/thanhcon14022004/MLN111/actions
+echo    Luu y: Trong GitHub Settings ^> Pages, dam bao ban da chon:
+echo    - Source: "Deploy from a branch"
+echo    - Branch: "main" va Thu muc: "/docs"
 echo =========================================================================
 echo.
 pause
