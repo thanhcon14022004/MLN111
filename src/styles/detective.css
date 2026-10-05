@@ -1,0 +1,212 @@
+/* =================================================================
+   PHILOSOPHY DETECTIVE BUREAU
+================================================================= */
+.detective-wrap {
+  padding: 2.5rem 0 5rem;
+}
+
+.dossier-card {
+  background: #0d121f;
+  border: 2px solid #ef4444;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 25px 60px -15px rgba(239, 68, 68, 0.25);
+  margin-bottom: 2.5rem;
+}
+
+.dossier-header-bar {
+  background: linear-gradient(90deg, #991b1b, #450a0a);
+  padding: 0.8rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.stamp-confidential {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.8rem;
+  background: #dc2626;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.detective-intro-body {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+@media (max-width: 850px) {
+  .detective-intro-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+.detective-image-box {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #090d16;
+}
+
+.detective-story-box {
+  background: rgba(30, 41, 59, 0.4);
+  border-left: 4px solid var(--accent-crimson);
+  padding: 1.5rem;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* =================================================================
+   INTERACTIVE INVESTIGATION BOARD
+================================================================= */
+.investigation-board {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+}
+
+.board-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Clues holding area */
+.unassigned-clues-section {
+  margin-bottom: 2.5rem;
+}
+.clues-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  min-height: 70px;
+  padding: 1rem;
+  background: rgba(30, 41, 59, 0.4);
+  border-radius: var(--radius-md);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+}
+
+.clue-chip {
+  background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 1.1rem;
+  font-size: 0.88rem;
+  color: #f8fafc;
+  cursor: grab;
+  user-select: none;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.clue-chip:hover {
+  background: #334155;
+  border-color: var(--accent-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(251, 191, 36, 0.25);
+}
+.clue-chip.active-selection {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.4);
+  background: #1e3a5f;
+}
+
+/* Category slots / buckets */
+.categories-bucket-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.category-bucket {
+  background: rgba(30, 41, 59, 0.5);
+  border: 2px dashed rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  padding: 1.2rem;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+}
+.category-bucket.drag-over {
+  border-color: var(--accent-cyan);
+  background: rgba(56, 189, 248, 0.08);
+}
+.category-bucket.ready-to-assign {
+  border-color: var(--accent-gold);
+  cursor: pointer;
+}
+
+.bucket-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+.bucket-name {
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+.bucket-desc {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+.bucket-clues-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex-grow: 1;
+}
+
+/* Case Solved Verdict */
+.verdict-box {
+  margin-top: 2.5rem;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(6, 78, 59, 0.6));
+  border: 2px solid var(--accent-emerald);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem;
+  box-shadow: 0 10px 40px -10px rgba(16, 185, 129, 0.35);
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.verdict-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: var(--radius-full);
+  background: var(--accent-emerald);
+  color: #064e3b;
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+
+.verdict-analysis-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #e2e8f0;
+  margin: 1.2rem 0 1.8rem;
+}
